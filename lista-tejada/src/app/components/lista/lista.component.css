@@ -1,0 +1,16 @@
+.bg-beige {
+    background: #ffdfb4;
+}
+
+.item-list {
+    border: 1px solid #adadad;
+    border-left: 10px solid;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.item-list:hover {
+    box-shadow: 0 1px 12px 2px #ababab;
+    transition: .8s ease;
+}

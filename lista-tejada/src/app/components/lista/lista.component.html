@@ -1,0 +1,24 @@
+<!-- As a heading -->
+<nav class="navbar bg-beige">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">Lista de alumnos</span>
+      <p class="mb-0">{{ fecha | date: 'dd/MM/yyyy hh:mm' }}</p>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <ng-container *ngFor="let estudiante of Estudiantes">
+            <div class="col-md-4 mb-3">
+                <div class="item-list" [ngStyle]="{'border-left-color': setColor(estudiante.interes)}">
+                    <p class="mb-0">Nombre de alumn@:</p>
+                    {{ estudiante.nombre | uppercase }}
+                    <div class="d-flex align-items-center" [ngStyle]="{'color': setColor(estudiante.interes)}">
+                        <img [src]="setIcon(estudiante.interes)"/>
+                        {{ estudiante.interes }}
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
